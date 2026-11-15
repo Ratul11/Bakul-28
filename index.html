@@ -1,15 +1,272 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekly Project Overview</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --success-bg: #dcfce7;
+      --success-text: #166534;
+      --warn-bg: #fef3c7;
+      --warn-text: #92400e;
+      --info-bg: #e0f2fe;
+      --info-text: #075985;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+
+    header h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 0.975rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.85rem;
+      color: var(--text);
+    }
+
+    .list-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.15rem 1.25rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.65rem;
+      color: var(--accent);
+    }
+
+    ul, ol {
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+      font-size: 0.95rem;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.94rem;
+    }
+
+    thead {
+      background-color: var(--accent-soft);
+    }
+
+    th, td {
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background-color: #f8fafc;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .badge.done {
+      background: var(--success-bg);
+      color: var(--success-text);
+    }
+
+    .badge.progress {
+      background: var(--warn-bg);
+      color: var(--warn-text);
+    }
+
+    .badge.planned {
+      background: var(--info-bg);
+      color: var(--info-text);
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
 <body>
-<u>Best Result:</u>
-<ol type="i" start="30">
-<li>Regularity</li>
-<li>Hard Work</li>
-<li>Sleep</li>
-</ol>
-<u>Worst Result:</u>
-<ul type="square">
-<li>Addiction</li>
-<li>গোলকের ব্যাসার্ধ পরিমাপে 2% ত্রুটি হলে আয়তন পরিমাপে শতকরা ত্রুটি কত হবে? </li>
-</ul>
+  <main class="container">
+    <header>
+      <h1>Weekly Project Overview</h1>
+      <p>Clean, responsive HTML template containing structured lists, a status table, and ready-to-use styling.</p>
+    </header>
+
+    <section>
+      <h2>Key Highlights &amp; Checklist</h2>
+      <div class="list-grid">
+        <div class="card">
+          <h3>Core Priorities (Unordered List)</h3>
+          <ul>
+            <li>Finalize user-facing layout and typography</li>
+            <li>Verify mobile and desktop table scrolling</li>
+            <li>Review accessibility contrast and headings</li>
+            <li>Prepare release notes for stakeholders</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Execution Steps (Ordered List)</h3>
+          <ol>
+            <li>Gather requirements and outline deliverables</li>
+            <li>Build semantic HTML structure</li>
+            <li>Apply responsive CSS styling</li>
+            <li>Test across browsers and publish</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Task &amp; Milestone Table</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Deliverable</th>
+              <th>Owner</th>
+              <th>Due Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Wireframes &amp; Content Outline</td>
+              <td>Nadia Rahman</td>
+              <td>Nov 16, 2026</td>
+              <td><span class="badge done">Completed</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>HTML Structure &amp; Data Table</td>
+              <td>Tariq Hasan</td>
+              <td>Nov 18, 2026</td>
+              <td><span class="badge progress">In Progress</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Responsive Styling &amp; QA Check</td>
+              <td>Nadia Rahman</td>
+              <td>Nov 20, 2026</td>
+              <td><span class="badge progress">In Progress</span></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Final Deployment &amp; Handoff</td>
+              <td>Tariq Hasan</td>
+              <td>Nov 22, 2026</td>
+              <td><span class="badge planned">Planned</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <span>Generated HTML Document</span>
+      <span>Ready to open directly in any browser</span>
+    </footer>
+  </main>
 </body>
 </html>
